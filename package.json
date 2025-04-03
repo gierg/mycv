@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && touch dist/.nojekyll && git add dist/ && git commit -m \"Deploy\" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "next": "latest",
